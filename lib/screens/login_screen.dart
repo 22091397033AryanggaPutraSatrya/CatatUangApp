@@ -54,12 +54,10 @@ class _LoginScreenState extends State<LoginScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(responseBody['message'])),
         );
-        // Tampilkan dialog peringatan jika login gagal
         _showErrorDialog(responseBody['message']);
       }
     } catch (e) {
       print('Error: $e');
-      // Tampilkan dialog peringatan jika terjadi kesalahan
       _showErrorDialog('Terjadi kesalahan. Silakan coba lagi.');
     }
   }

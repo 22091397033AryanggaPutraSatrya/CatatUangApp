@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart'; // Import the package
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -16,7 +16,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   void initState() {
     super.initState();
-    // Panggil metode untuk memperbarui data profil pertama kali
     fetchProfileData();
   }
 
@@ -50,10 +49,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
   // Method to handle logout
   Future<void> _logout() async {
     final prefs = await SharedPreferences.getInstance();
-    final storage = FlutterSecureStorage(); // Initialize the secure storage
-    await prefs.clear(); // Clear SharedPreferences
-    await storage.deleteAll(); // Clear secure storage
-    Navigator.pushReplacementNamed(context, '/login'); // Navigate to login screen
+    final storage = FlutterSecureStorage();
+    await prefs.clear();
+    await storage.deleteAll();
+    Navigator.pushReplacementNamed(context, '/login');
   }
 
   @override
@@ -64,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         actions: [
           IconButton(
             icon: Icon(Icons.logout),
-            onPressed: _logout, // Call the logout method when pressed
+            onPressed: _logout,
           ),
         ],
       ),

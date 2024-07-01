@@ -104,7 +104,7 @@ class _PemasukanScreenState extends State<PemasukanScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Pemasukan berhasil dihapus')),
       );
-      fetchData(); // Mengambil ulang data setelah penghapusan
+      fetchData();
     } else {
       final responseBody = jsonDecode(response.body);
       ScaffoldMessenger.of(context).showSnackBar(
@@ -140,7 +140,7 @@ class _PemasukanScreenState extends State<PemasukanScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Pemasukan berhasil diperbarui')),
       );
-      fetchData(); // Mengambil ulang data setelah penghapusan
+      fetchData();
     } else {
       final responseBody = jsonDecode(response.body);
       ScaffoldMessenger.of(context).showSnackBar(

@@ -107,7 +107,7 @@ class _PengeluaranScreenState extends State<PengeluaranScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Pengeluaran berhasil diperbarui')),
       );
-      fetchData(); // Mengambil ulang data setelah pembaruan
+      fetchData();
     } else {
       final responseBody = jsonDecode(response.body);
       ScaffoldMessenger.of(context).showSnackBar(
@@ -140,7 +140,7 @@ class _PengeluaranScreenState extends State<PengeluaranScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Pengeluaran berhasil dihapus')),
       );
-      fetchData(); // Mengambil ulang data setelah penghapusan
+      fetchData();
     } else {
       final responseBody = jsonDecode(response.body);
       ScaffoldMessenger.of(context).showSnackBar(

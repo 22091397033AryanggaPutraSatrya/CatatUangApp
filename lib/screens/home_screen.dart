@@ -17,15 +17,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    fetchDataPemasukan(); // Call the method to fetch pemasukan data
-    fetchDataPengeluaran(); // Call the method to fetch pengeluaran data
-    // Panggil metode untuk memperbarui data pertama kali
+    fetchDataPemasukan();
+    fetchDataPengeluaran();
     fetchFinancialData();
-    // Mulai timer untuk memperbarui data setiap 1 detik
     Timer.periodic(Duration(seconds: 1), (timer) {
       fetchFinancialData();
-      fetchDataPemasukan(); // Call the method to fetch pemasukan data
-      fetchDataPengeluaran(); // Call the method to fetch pengeluaran data
+      fetchDataPemasukan();
+      fetchDataPengeluaran();
     });
   }
 

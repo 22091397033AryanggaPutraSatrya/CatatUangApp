@@ -9,11 +9,6 @@ import 'screens/pengeluaran_screen.dart';
 import 'screens/profile.dart';
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  //
-  // ByteData data = await PlatformAssetBundle().load('assets/ca/catatuangryts.000webhostapp.com.crt');
-  // SecurityContext.defaultContext.setTrustedCertificatesBytes(data.buffer.asUint8List());
-
   runApp(MyApp());
 }
 
@@ -23,12 +18,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Catatan Keuangan Harian',
       theme: ThemeData(
-        primaryColor: Color(0xFF27374D), // Warna utama
-        hintColor: Color(0xFF526D82), // Warna aksen
-        scaffoldBackgroundColor: Color(0xFFDDE6ED), // Warna latar belakang scaffold
-        cardColor: Color(0xFF9DB2BF), // Warna kartu
+        primaryColor: Color(0xFF27374D),
+        hintColor: Color(0xFF526D82),
+        scaffoldBackgroundColor: Color(0xFFDDE6ED),
+        cardColor: Color(0xFF9DB2BF),
 
-        // Mengatur tema untuk AppBar
         appBarTheme: AppBarTheme(
           color: Color(0xFF27374D),
           iconTheme: IconThemeData(color: Colors.white), toolbarTextStyle: TextTheme(
@@ -44,26 +38,23 @@ class MyApp extends StatelessWidget {
           ).titleLarge,
         ),
 
-        // Mengatur tema untuk tombol
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white, backgroundColor: Color(0xFF526D82), // Warna teks tombol
-          ),
-        ),
-// Mengatur tema untuk TextButton
-        textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(
-            foregroundColor: Color(0xFF526D82), // Warna teks tombol
+            foregroundColor: Colors.white, backgroundColor: Color(0xFF526D82),
           ),
         ),
 
-        // Mengatur tema untuk teks
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: Color(0xFF526D82),
+          ),
+        ),
+
         textTheme: TextTheme(
           bodyLarge: TextStyle(color: Color(0xFF27374D)),
           bodyMedium: TextStyle(color: Color(0xFF27374D)),
         ),
 
-        // Mengatur tema untuk input
         inputDecorationTheme: InputDecorationTheme(
           labelStyle: TextStyle(color: Color(0xFF526D82)),
           focusedBorder: UnderlineInputBorder(
@@ -84,7 +75,7 @@ class MyApp extends StatelessWidget {
         ),
 
         dialogTheme: DialogTheme(
-          backgroundColor: Color(0xFF9DB2BF), // Warna latar belakang dialog
+          backgroundColor: Color(0xFF9DB2BF),
           titleTextStyle: TextStyle(
             color: Color(0xFF27374D),
             fontSize: 20,
